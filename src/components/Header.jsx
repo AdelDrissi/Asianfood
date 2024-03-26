@@ -16,8 +16,8 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <a className="AdelDev" href='#whoIamSection'>
-          <p className="name">Adel Drissi</p>
+        <a className="food-asian" href='Accueil'>
+          <p className="name">Food Asian</p>
         </a>
         <div
           className={`anchorLinks ${
@@ -37,7 +37,7 @@ const Header = () => {
             </li>
             <li onClick={() => setIsMenuOpen(false)}>
               <ScrollLink to="projectSection"  smooth={true} duration={700}>
-                Nos services
+                Services
               </ScrollLink>
             </li>
             <li onClick={() => setIsMenuOpen(false)}>
@@ -47,14 +47,14 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        {/* <div className="IconResponsive">
+        <div className="IconResponsive">
           <FontAwesomeIcon
             icon={faBars}
             className="NavbarIcons"
             onClick={toggleMenu}
             aria-label="menu de navigation"
           />
-        </div> */}
+        </div>
       </div>
     </header>
   );
