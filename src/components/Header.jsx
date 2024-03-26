@@ -36,7 +36,7 @@ const Header = () => {
               </ScrollLink>
             </li>
             <li onClick={() => setIsMenuOpen(false)}>
-              <ScrollLink to="projectSection"  smooth={true} duration={700}>
+              <ScrollLink to="Services"  smooth={true} duration={700}>
                 Services
               </ScrollLink>
             </li>
