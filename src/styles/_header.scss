@@ -59,6 +59,36 @@
   }
 }
 
+
+.anchorLinks__list {
+  li {
+    a {
+      position: relative;
+      text-decoration: none;
+      color: white;
+      
+      &:hover {
+        color: yellow;
+        
+      }
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background-color: transparent;
+        position: absolute;
+        bottom: -2px;
+        transition: width 0.3s ease, background-color 1.0s ease;
+      }
+      &:hover::after {
+        width: 100%;
+        background-color: yellow;
+      }
+    }
+  }
+}
+
 .IconResponsive {
   display: none;
   padding: 30px;
