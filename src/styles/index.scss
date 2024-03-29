@@ -1,5 +1,14 @@
 @import './Header';
+@import './mainContent';
 
 body {
+  font-family: 'Raleway', 'lato', sans-serif;
   margin: 0;
+  overflow-x: hidden;
+  h1 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 7vh;
+    letter-spacing: 2vh;
+  }
 }
