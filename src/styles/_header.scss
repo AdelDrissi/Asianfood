@@ -49,7 +49,7 @@
 
       li {
         list-style-type: none;
-        width: 112px;
+        width: 10vw;
         letter-spacing: 3px;
         transition-duration: 250ms;
         height: 100%;
@@ -59,17 +59,15 @@
   }
 }
 
-
 .anchorLinks__list {
   li {
     a {
       position: relative;
       text-decoration: none;
       color: white;
-      
+
       &:hover {
         color: yellow;
-        
       }
       &::after {
         content: '';
@@ -79,21 +77,41 @@
         background-color: transparent;
         position: absolute;
         bottom: -2px;
-        transition: width 0.3s ease, background-color 1.0s ease;
+        transition: 0.3s ease, background-color 1s ease;
       }
       &:hover::after {
         width: 100%;
         background-color: yellow;
       }
+      .Title-menu:hover {
+        border-bottom: 3px solid yellow;
+        transition: 0.3s ease, background-color 2s ease;
+        width: 100%;
+      }
     }
   }
 }
+.Title-menu {
+  color: #fff;
+  display: flex;
+  margin-top: 1vw;
+}
 
-.IconResponsive {
-  display: none;
-  padding: 30px;
-  top: 8px;
-  font-size: 26px;
+.submenu {
+  position: absolute;
+  top: 100%;
+  justify-content: center;
+  border-top: none; /* Suppression de la bordure supérieure */
+  z-index: 1000; /* Assure que le menu s'affiche au-dessus des autres éléments */
+  display: flex; /* Afficher les éléments en ligne */
+  flex-wrap: wrap; /* Permettre le passage à la ligne */
+}
+
+.submenu div {
+  padding: 5px 10px; /* Espacement entre les éléments */
+  display: flex; /* Afficher le contenu en ligne */
+  align-items: center; /* Aligner le contenu verticalement */
+  margin-right: 10px; /* Espacement entre les éléments à l'intérieur du div */
 }
 
 .IconResponsive {
@@ -106,19 +124,4 @@
 .header-content {
   display: flex;
   justify-content: space-between;
-}
-
-.AppearLink {
-  animation-name: AppearLink;
-  animation-duration: 400ms;
-  animation-timing-function: ease-out;
-}
-
-@keyframes AppearLink {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }

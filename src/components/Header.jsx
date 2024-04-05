@@ -1,46 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link as ScrollLink } from 'react-scroll';
-import { useState } from 'react';
 
 const Header = () => {
-  //States
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  //Comportement
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+
+  const toggleSubMenu = () => {
+    setIsSubMenuOpen(!isSubMenuOpen);
   };
 
-  //Render
   return (
     <header className="header">
       <div className="header-content">
-        <a className="food-asian" href='Accueil'>
+        <a className="food-asian" href="Accueil">
           <p className="name">Food Asian</p>
         </a>
         <div
-          className={`anchorLinks ${
-            isMenuOpen ? 'anchorLinks--open AppearLink' : ''
-          }`}
+          className={`anchorLinks ${isSubMenuOpen ? 'anchorLinks--open' : ''}`}
         >
           <ul className="anchorLinks__list">
-            <li onClick={() => setIsMenuOpen(false)}>
+            <li onClick={() => setIsSubMenuOpen(false)}>
               <ScrollLink to="homeSection" smooth={true} duration={700}>
                 Accueil
               </ScrollLink>
             </li>
-            <li onClick={() => setIsMenuOpen(false)}>
+            <li onClick={() => setIsSubMenuOpen(false)}>
               <ScrollLink to="aboutSection" smooth={true} duration={700}>
                 A propos
               </ScrollLink>
             </li>
-            <li onClick={() => setIsMenuOpen(false)}>
-              <ScrollLink to="Services"  smooth={true} duration={700}>
+            <li
+              onMouseEnter={() => setIsSubMenuOpen(true)}
+              onMouseLeave={() => setIsSubMenuOpen(false)}
+            >
+              <ScrollLink to="Services" smooth={true} duration={700}>
                 Services
+                {isSubMenuOpen && (
+                  <div className="submenu">
+                    <div className="Title-menu">Les boîtes a lunch</div>
+                    <div className="Title-menu">Pour les réceptions</div>
+                    <div className="Title-menu">Menus Végés</div>
+                    <div className="Title-menu">Les Desserts</div>
+                    <div className="Title-menu">Les Evenements</div>
+                  </div>
+                )}
               </ScrollLink>
             </li>
-            <li onClick={() => setIsMenuOpen(false)}>
+            <li onClick={() => setIsSubMenuOpen(false)}>
               <ScrollLink to="sectionContact" smooth={true} duration={700}>
                 Contact
               </ScrollLink>
@@ -51,7 +58,7 @@ const Header = () => {
           <FontAwesomeIcon
             icon={faBars}
             className="NavbarIcons"
-            onClick={toggleMenu}
+            onClick={toggleSubMenu}
             aria-label="menu de navigation"
           />
         </div>
@@ -59,4 +66,5 @@ const Header = () => {
     </header>
   );
 };
+
 export default Header;
