@@ -7,7 +7,10 @@ function MainContent() {
       <img src={backSushi} alt="Background" className="image" />
       <div className="resto-name">
         <h1>Wazabi</h1>
-        <h2>Traiter - Cuisine - Inspiration - Japon </h2>
+        <h2>Traiteur - Cuisine - Inspiration - Japon</h2>
+        <a href="#" className="btn-projects">
+          Réserver
+        </a>
       </div>
     </div>
   );

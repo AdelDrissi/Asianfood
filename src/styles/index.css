@@ -1,34 +1,34 @@
+@charset "UTF-8";
 .header {
   z-index: 10;
   width: 100%;
   position: relative;
   top: 0;
   padding-top: 20px;
-  background: #fff;
+  background: black;
   height: 60px;
   align-items: center;
   justify-content: space-between;
 }
-.header .AdelDev {
+.header .food-asian {
   justify-content: flex-start;
   padding-left: 20px;
-  color: white;
   text-decoration: none;
 }
-.header .AdelDev:hover {
+.header .food-asian:hover {
   -webkit-animation: rotate-logo 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955) backwards;
           animation: rotate-logo 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955) backwards;
 }
-.header .AdelDev:-webkit-any-link {
+.header .food-asian:-webkit-any-link {
   color: #fff;
 }
-.header .AdelDev:-moz-any-link {
+.header .food-asian:-moz-any-link {
   color: #fff;
 }
-.header .AdelDev:any-link {
+.header .food-asian:any-link {
   color: #fff;
 }
-.header .AdelDev .name {
+.header .food-asian .name {
   position: relative;
   color: white;
   font-weight: 700;
@@ -36,7 +36,7 @@
   font-size: 20px;
   text-transform: uppercase;
 }
-.header .AdelDev .dev {
+.header .food-asian .dev {
   font-size: 14px;
   position: relative;
   bottom: 16px;
@@ -55,17 +55,63 @@
 }
 .header .anchorLinks__list li {
   list-style-type: none;
-  width: 112px;
+  width: 10vw;
+  letter-spacing: 3px;
   transition-duration: 250ms;
   height: 100%;
   cursor: pointer;
 }
 
-.IconResponsive {
-  display: none;
-  padding: 30px;
-  top: 8px;
-  font-size: 26px;
+.anchorLinks__list li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+.anchorLinks__list li a:hover {
+  color: yellow;
+}
+.anchorLinks__list li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -2px;
+  transition: 0.3s ease, background-color 1s ease;
+}
+.anchorLinks__list li a:hover::after {
+  width: 100%;
+  background-color: yellow;
+}
+.anchorLinks__list li a .Title-menu:hover {
+  border-bottom: 3px solid yellow;
+  transition: 0.3s ease, background-color 2s ease;
+  width: 100%;
+}
+
+.Title-menu {
+  color: #fff;
+  display: flex;
+  margin-top: 1vw;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  justify-content: center;
+  background: black; /* Background de fond*/
+  border-top: none; /* Suppression de la bordure supérieure */
+  z-index: 1000; /* Assure que le menu s'affiche au-dessus des autres éléments */
+  display: flex; /* Afficher les éléments en ligne */
+  flex-wrap: wrap; /* Permettre le passage à la ligne */
+}
+
+.submenu div {
+  padding: 5px 10px; /* Espacement entre les éléments */
+  display: flex; /* Afficher le contenu en ligne */
+  align-items: center; /* Aligner le contenu verticalement */
+  margin-right: 10px; /* Espacement entre les éléments à l'intérieur du div */
 }
 
 .IconResponsive {
@@ -80,34 +126,166 @@
   justify-content: space-between;
 }
 
-.AppearLink {
-  -webkit-animation-name: AppearLink;
-          animation-name: AppearLink;
-  -webkit-animation-duration: 400ms;
-          animation-duration: 400ms;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-@-webkit-keyframes AppearLink {
-  from {
-    opacity: 0;
+.container-info {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.image {
+  width: 100%;
+  height: 75vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn-projects {
+  line-height: 2.5;
+  padding: 3% 20%;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  background-color: #fff;
+  border: 1px solid;
+  text-decoration: none;
+}
+
+.btn-projects:hover {
+  background-color: lightblue;
+  transition: all 1s;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.resto-name {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-info {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.background-info {
+  color: black;
+  border: 1px solid black;
+  margin: 0 10%;
+  background-color: lightyellow;
+}
+
+.image-info {
+  width: 30%;
+  height: 30vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 2%;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #9356dc;
+  border-bottom: 10px solid #ff79da;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5 linear infinite;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  to {
-    opacity: 1;
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-@keyframes AppearLink {
-  from {
-    opacity: 0;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  to {
-    opacity: 1;
+  100% {
+    transform: rotate(360deg);
   }
 }
 body {
-  font-family: "Raleway", "lato", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   overflow-x: hidden;
+}
+body h1 {
+  font-weight: 400;
+  margin: 0;
+  font-size: 7vh;
+  letter-spacing: 2vh;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #9356dc;
+  border-bottom: 10px solid #7982ff;
+  -webkit-animation-name: myloader;
+          animation-name: myloader;
+  background-color: transparent;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.loader-page {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@-webkit-keyframes myloader {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(260deg);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes myloader {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(260deg);
+    opacity: 0;
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */

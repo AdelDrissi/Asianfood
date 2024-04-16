@@ -101,6 +101,7 @@
   position: absolute;
   top: 100%;
   justify-content: center;
+  background: black; /* Background de fond*/
   border-top: none; /* Suppression de la bordure supérieure */
   z-index: 1000; /* Assure que le menu s'affiche au-dessus des autres éléments */
   display: flex; /* Afficher les éléments en ligne */
