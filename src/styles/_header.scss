@@ -1,3 +1,5 @@
+@import './Mixins';
+
 .header {
   z-index: 10;
   width: 100%;
@@ -100,8 +102,9 @@
 .submenu {
   position: absolute;
   top: 100%;
+  display: block;
   justify-content: center;
-  background: black; /* Background de fond*/
+  // background: black; /* Background de fond*/
   border-top: none; /* Suppression de la bordure supérieure */
   z-index: 1000; /* Assure que le menu s'affiche au-dessus des autres éléments */
   display: flex; /* Afficher les éléments en ligne */
@@ -125,4 +128,41 @@
 .header-content {
   display: flex;
   justify-content: space-between;
+}
+
+@include tabAndLess {
+  .header .anchorLinks__list {
+    flex-direction: column;
+    padding: 6vh;
+    gap: 15px;
+    transition: all 1s;
+  }
+}
+@include tabAndLess {
+  .anchorLinks__list {
+    padding-top: 10%;
+    margin-top: 10%;
+  }
+}
+
+@include tabAndLess {
+  .header .anchorLinks {
+    display: none;
+  }
+}
+@include tabAndLess {
+  .header .anchorLinks--open {
+    display: block;
+    height: 12%;
+  }
+}
+
+@include tabAndLess {
+  .header .IconResponsive {
+    display: inline;
+    position: absolute;
+    right: 10px;
+    color: #fff;
+    top: 7px;
+  }
 }

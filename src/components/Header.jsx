@@ -10,6 +10,10 @@ const Header = () => {
     setIsSubMenuOpen(!isSubMenuOpen);
   };
 
+  const closeSubMenu = () => {
+    setIsSubMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="header-content">
@@ -20,25 +24,31 @@ const Header = () => {
           className={`anchorLinks ${isSubMenuOpen ? 'anchorLinks--open' : ''}`}
         >
           <ul className="anchorLinks__list">
-            <li onClick={() => setIsSubMenuOpen(false)}>
+            <li onClick={closeSubMenu}>
               <ScrollLink to="homeSection" smooth={true} duration={700}>
                 Accueil
               </ScrollLink>
             </li>
-            <li onClick={() => setIsSubMenuOpen(false)}>
+            <li onClick={closeSubMenu}>
               <ScrollLink to="aboutSection" smooth={true} duration={700}>
                 A propos
+              </ScrollLink>
+            </li>
+            <li onClick={closeSubMenu}>
+              <ScrollLink to="sectionContact" smooth={true} duration={700}>
+                Contact
               </ScrollLink>
             </li>
             <li
               onMouseEnter={() => setIsSubMenuOpen(true)}
               onMouseLeave={() => setIsSubMenuOpen(false)}
+              onClick={closeSubMenu}
             >
               <ScrollLink to="Services" smooth={true} duration={700}>
                 Services
                 {isSubMenuOpen && (
                   <div className="submenu">
-                    <div className="Title-menu">Les boîtes a lunch</div>
+                    <div className="Title-menu">Les boîtes à lunch</div>
                     <div className="Title-menu">Pour les réceptions</div>
                     <div className="Title-menu">Menus Végés</div>
                     <div className="Title-menu">Les Desserts</div>
@@ -47,13 +57,8 @@ const Header = () => {
                 )}
               </ScrollLink>
             </li>
-            <li onClick={() => setIsSubMenuOpen(false)}>
-              <ScrollLink to="sectionContact" smooth={true} duration={700}>
-                Contact
-              </ScrollLink>
-            </li>
           </ul>
-        </div>
+       </div>
         <div className="IconResponsive">
           <FontAwesomeIcon
             icon={faBars}
