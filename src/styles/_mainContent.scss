@@ -15,7 +15,7 @@
   object-fit: cover;
 }
 
-.btn-projects {
+.btn-content {
   line-height: 2.5;
   padding: 3% 20%;
   font-weight: bold;
@@ -27,11 +27,11 @@
   border: 1px solid;
   text-decoration: none;
 }
-.btn-projects:hover {
+.btn-content:hover {
   background-color: lightblue;
   transition: all 1s;
   color: #fff;
-  transition: 0.3s;
+  transition: all ease 1s;
 }
 
 .resto-name {

@@ -3,8 +3,7 @@ import MainContent from './components/MainContent';
 import InfoCuisine from './components/InfoCuisine';
 import Loader from './components/Loader';
 import Header from './components/Header';
-
-
+import Lunch from './components/Lunch';
 
 function App() {
   return (
@@ -13,6 +12,7 @@ function App() {
       <MainContent />
       <InfoCuisine />
       <Loader />
+      <Lunch />
     </div>
   );
 }

@@ -8,7 +8,7 @@ function MainContent() {
       <div className="resto-name">
         <h1>Wazabi</h1>
         <h2>Traiteur - Cuisine - Inspiration - Japon</h2>
-        <a href="#" className="btn-projects">
+        <a href="#" className="btn-content">
           Réserver
         </a>
       </div>
