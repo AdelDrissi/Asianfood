@@ -29,12 +29,19 @@
       font-family: 'Manrope', sans-serif;
       font-size: 20px;
       text-transform: uppercase;
+      &:hover {
+        opacity: 0.7;
+      }
     }
     .dev {
       font-size: 14px;
       position: relative;
       bottom: 16px;
     }
+  }
+
+  .container-lunch {
+    background: black;
   }
 
   .anchorLinks {
@@ -70,6 +77,8 @@
 
       &:hover {
         color: yellow;
+        border-bottom: 2px solid yellow;
+        transition: 0.2s ease, background-color 2s ease;
       }
       &::after {
         content: '';
@@ -79,16 +88,15 @@
         background-color: transparent;
         position: absolute;
         bottom: -2px;
-        transition: 0.3s ease, background-color 1s ease;
+        transition: 0.9s ease, background-color 1s ease;
       }
       &:hover::after {
         width: 100%;
-        background-color: yellow;
       }
       .Title-menu:hover {
-        border-bottom: 3px solid yellow;
         transition: 0.3s ease, background-color 2s ease;
         width: 100%;
+        border-bottom: 2px solid yellow;
       }
     }
   }
@@ -97,25 +105,6 @@
   color: #fff;
   display: flex;
   margin-top: 1vw;
-}
-
-.submenu {
-  position: absolute;
-  top: 100%;
-  display: block;
-  justify-content: center;
-  // background: black; /* Background de fond*/
-  border-top: none; /* Suppression de la bordure supérieure */
-  z-index: 1000; /* Assure que le menu s'affiche au-dessus des autres éléments */
-  display: flex; /* Afficher les éléments en ligne */
-  flex-wrap: wrap; /* Permettre le passage à la ligne */
-}
-
-.submenu div {
-  padding: 5px 10px; /* Espacement entre les éléments */
-  display: flex; /* Afficher le contenu en ligne */
-  align-items: center; /* Aligner le contenu verticalement */
-  margin-right: 10px; /* Espacement entre les éléments à l'intérieur du div */
 }
 
 .IconResponsive {
@@ -130,14 +119,18 @@
   justify-content: space-between;
 }
 
+//* Média Query /*
+
 @include tabAndLess {
   .header .anchorLinks__list {
     flex-direction: column;
-    padding: 6vh;
+    padding: 40px 59px;
+    background-color: black;
     gap: 15px;
     transition: all 1s;
   }
 }
+
 @include tabAndLess {
   .anchorLinks__list {
     padding-top: 10%;

@@ -31,12 +31,7 @@ const Header = () => {
             </li>
             <li onClick={closeSubMenu}>
               <ScrollLink to="aboutSection" smooth={true} duration={700}>
-                A propos
-              </ScrollLink>
-            </li>
-            <li onClick={closeSubMenu}>
-              <ScrollLink to="sectionContact" smooth={true} duration={700}>
-                Contact
+                Infos
               </ScrollLink>
             </li>
             <li
@@ -47,8 +42,8 @@ const Header = () => {
               <ScrollLink to="Services" smooth={true} duration={700}>
                 Services
                 {isSubMenuOpen && (
-                  <div className="submenu">
-                    <div className="Title-menu">Les boîtes à lunch</div>
+                  <div className="container-lunch">
+                    <div className="Title-menu">Boîtes à lunch</div>
                     <div className="Title-menu">Pour les réceptions</div>
                     <div className="Title-menu">Menus Végés</div>
                     <div className="Title-menu">Les Desserts</div>
@@ -57,8 +52,13 @@ const Header = () => {
                 )}
               </ScrollLink>
             </li>
+            <li onClick={closeSubMenu}>
+              <ScrollLink to="sectionContact" smooth={true} duration={700}>
+                Contact
+              </ScrollLink>
+            </li>
           </ul>
-       </div>
+        </div>
         <div className="IconResponsive">
           <FontAwesomeIcon
             icon={faBars}
