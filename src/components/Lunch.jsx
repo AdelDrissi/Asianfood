@@ -8,7 +8,7 @@ function Lunch() {
         <div className="image-container">
           <img src={lunchbox} alt="Background" className="lunch-box" />
           <div className="text-overlay">
-            <h1> Lunch Box ! </h1>
+            <h1 className='lunch-title'> Lunch Box ! </h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
               reprehenderit ex aperiam officiis suscipit aliquam iusto, quam

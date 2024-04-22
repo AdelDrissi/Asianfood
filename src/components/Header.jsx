@@ -34,6 +34,11 @@ const Header = () => {
                 Infos
               </ScrollLink>
             </li>
+            <li onClick={closeSubMenu}>
+              <ScrollLink to="sectionContact" smooth={true} duration={700}>
+                Contact
+              </ScrollLink>
+            </li>
             <li
               onMouseEnter={() => setIsSubMenuOpen(true)}
               onMouseLeave={() => setIsSubMenuOpen(false)}
@@ -50,11 +55,6 @@ const Header = () => {
                     <div className="Title-menu">Les Evenements</div>
                   </div>
                 )}
-              </ScrollLink>
-            </li>
-            <li onClick={closeSubMenu}>
-              <ScrollLink to="sectionContact" smooth={true} duration={700}>
-                Contact
               </ScrollLink>
             </li>
           </ul>
