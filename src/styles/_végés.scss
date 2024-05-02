@@ -1,4 +1,4 @@
-.végés-container {
+.lunch-container-végés {
   width: 100%;
   display: flex;
   margin: 5% 0;
@@ -13,21 +13,21 @@
   left: 27%;
 }
 
-.image-container {
+.image-container-végés {
   position: static;
   overflow: hidden;
 }
 
-.lunch-box {
+.menus-végés {
   width: 100%; /* Assurez-vous que l'image remplit complètement son conteneur */
   display: block;
 }
 
-.lunch-title {
+.végés-title {
   text-align: end;
 }
 
-.text-overlay {
+.végés-overlay {
   position: absolute;
   background: yellow;
   top: 52%; /* Place le contenu au centre vertical de l'image */
