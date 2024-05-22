@@ -1,14 +1,14 @@
 import React from 'react';
-import recep from '../images/recep.jpg';
+import Dessert from '../images/Dessert.jpg';
 
-function Reception() {
+function Desserts() {
   return (
-    <section className="lunch-reserve" id='Receptions'>
+    <section className="dessert-reserve" id="Desserts">
       <div className="lunch-japanese-reception">
-        <div className="image-reception">
-          <img src={recep} alt="Background" className="reception-box" />
-          <div className="text-overlay-reception">
-            <h1 className="lunch-title-reception"> Pour les réceptions </h1>
+        <div className="image-desserts">
+          <img src={Dessert} alt="Background" className="reception-box" />
+          <div className="text-overlay-desserts">
+            <h1 className="lunch-title-reception"> Desserts </h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
               reprehenderit ex aperiam officiis suscipit aliquam iusto, quam
@@ -24,4 +24,4 @@ function Reception() {
   );
 }
 
-export default Reception;
+export default Desserts;

@@ -3,7 +3,7 @@ import CuisineJapo2 from '../images/CuisineJapo2.jpg';
 
 function InfoCuisine() {
   return (
-    <div className="container-info">
+    <div className="container-info" id='aboutSection'>
       <img src={CuisineJapo2} alt="Background" className="image-info" />
       <div className="background-info">
         <h2>Bienvenue dans l'univers de la cuisine japonaise</h2>

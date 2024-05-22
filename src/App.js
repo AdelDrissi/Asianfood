@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Lunch from './components/Lunch';
 import Reception from './components/Reception';
 import Végés from './components/Végés';
+import Dessert from './components/Dessert';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Lunch />
       <Reception />
       <Végés />
+      <Dessert />
     </div>
   );
 }

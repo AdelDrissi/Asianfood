@@ -44,15 +44,22 @@ const Header = () => {
               onMouseLeave={() => setIsSubMenuOpen(false)}
               onClick={closeSubMenu}
             >
-              <ScrollLink to="Services" smooth={true} duration={700}>
+              <ScrollLink smooth={true} duration={700}>
                 Services
                 {isSubMenuOpen && (
                   <div className="container-lunch">
-                    <div className="Title-menu">Boîtes à lunch</div>
-                    <div className="Title-menu">Pour les réceptions</div>
-                    <div className="Title-menu">Menus Végés</div>
-                    <div className="Title-menu">Les Desserts</div>
-                    <div className="Title-menu">Les Evenements</div>
+                    <ScrollLink to="BoitesALunch" smooth={true} duration={700}>
+                      <div className="Title-menu">Boîtes à lunch</div>
+                    </ScrollLink>
+                    <ScrollLink to="Receptions" smooth={true} duration={700}>
+                      <div className="Title-menu">Réceptions</div>
+                    </ScrollLink>
+                    <ScrollLink to="Menus-Végés" smooth={true} duration={700}>
+                      <div className="Title-menu">Menus Végés</div>
+                    </ScrollLink>
+                    <ScrollLink to="Desserts" smooth={true} duration={700}>
+                      <div className="Title-menu">Desserts</div>
+                    </ScrollLink>
                   </div>
                 )}
               </ScrollLink>

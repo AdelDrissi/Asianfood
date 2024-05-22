@@ -3,7 +3,7 @@ import backSushi from '../images/backSushi.jpg';
 
 function MainContent() {
   return (
-    <div className="container">
+    <div className="container" id='homeSection'>
       <img src={backSushi} alt="Background" className="image" />
       <div className="resto-name">
         <h1>Wazabi</h1>
