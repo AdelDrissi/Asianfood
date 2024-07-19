@@ -7,6 +7,7 @@ import Lunch from './components/Lunch';
 import Reception from './components/Reception';
 import Végés from './components/Végés';
 import Dessert from './components/Dessert';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Reception />
       <Végés />
       <Dessert />
+      <Contact />
     </div>
   );
 }
