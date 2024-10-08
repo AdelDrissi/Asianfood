@@ -14,7 +14,8 @@ const Contact = () => {
     <div>
       <h2>Contactez-nous</h2>
       <form onSubmit={handleSubmit}>
-        <div >
+        <div>
+          <div className="container-info" id="sectionContact"></div>
           <label htmlFor="name">Nom:</label>
           <input
             type="text"
@@ -22,10 +23,9 @@ const Contact = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            
           />
         </div>
-        <div >
+        <div>
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -33,7 +33,6 @@ const Contact = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            
           />
         </div>
         <div>
@@ -45,12 +44,10 @@ const Contact = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" >
-          Envoyer
-        </button>
+        <button type="submit">Envoyer</button>
       </form>
     </div>
   );
 };
 
-export default Contact 
+export default Contact;
